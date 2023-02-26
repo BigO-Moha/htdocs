@@ -1,0 +1,3 @@
+﻿<option value="USD">
+	United States dollar - USD ($)
+</option>
