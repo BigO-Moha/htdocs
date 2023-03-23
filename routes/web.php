@@ -272,6 +272,8 @@ Route::group(['middleware' => ['install']], function () {
             //Product Unit Controller
             Route::resource('product_units', 'ProductUnitController');
 
+            Route::resource('product_sites', 'ProductSiteController');
+
             //Permission Controller
             Route::get('permission/control/{user_id?}', 'PermissionController@index')->name('permission.manage');
             Route::post('permission/store', 'PermissionController@store')->name('permission.manage');

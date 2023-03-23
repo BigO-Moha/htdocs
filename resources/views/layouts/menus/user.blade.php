@@ -1,16 +1,16 @@
 @if( has_feature( 'contacts_limit' ) )
 <li>
-	<a href="javascript: void(0);"><i class="ti-id-badge"></i><span>{{ _lang('Customers') }}</span><span class="menu-arrow"><i class="mdi mdi-chevron-right"></i></span></a>
+	<a href="javascript: void(0);"><i class="ti-id-badge"></i><span>macaamiisha</span><span class="menu-arrow"><i class="mdi mdi-chevron-right"></i></span></a>
 	<ul class="nav-second-level" aria-expanded="false">
-		<li class="nav-item"><a class="nav-link" href="{{ url('contacts') }}">{{ _lang('Contacts List') }}</a></li>
-		<li class="nav-item"><a class="nav-link" href="{{ url('contacts/create') }}">{{ _lang('Add New') }}</a></li>	
-		<li class="nav-item"><a class="nav-link" href="{{ url('contact_groups') }}">{{ _lang('Contact Group') }}</a></li>	
+		<li class="nav-item"><a class="nav-link" href="{{ url('contacts') }}">liiska macaamiisha</a></li>
+		<li class="nav-item"><a class="nav-link" href="{{ url('contacts/create') }}">abuur macmiil cusub</a></li>
+		<li class="nav-item"><a class="nav-link" href="{{ url('contact_groups') }}">kooxaha macaamiisha</a></li>
 	</ul>
 </li>
 @endif
 
 @if( has_feature('project_management_module') )
-<li>
+<!-- <li>
 	<a href="{{ route('leads.index') }}"><i class="fas fa-tty"></i><span>{{ _lang('Leads') }}</span></a>
 </li>
 
@@ -20,96 +20,96 @@
 
 <li>
 	<a href="{{ route('tasks.index') }}"><i class="ti-check-box"></i><span>{{ _lang('Tasks') }}</span></a>
-</li>
+</li> -->
 @endif
 
 
 <li>
-	<a href="javascript: void(0);"><i class="ti-shopping-cart"></i><span>{{ _lang('Products') }}</span><span class="menu-arrow"><i class="mdi mdi-chevron-right"></i></span></a>
+	<a href="javascript: void(0);"><i class="ti-shopping-cart"></i><span>badeecada</span><span class="menu-arrow"><i class="mdi mdi-chevron-right"></i></span></a>
 	<ul class="nav-second-level" aria-expanded="false">
-		<li class="nav-item"><a class="nav-link" href="{{ url('products/create') }}">{{ _lang('Add New') }}</a></li>
-		<li class="nav-item"><a class="nav-link" href="{{ url('products') }}">{{ _lang('Product List') }}</a></li>	
+		<li class="nav-item"><a class="nav-link" href="{{ url('products/create') }}">abuur badeeco</a></li>
+		<li class="nav-item"><a class="nav-link" href="{{ url('products') }}">liiska badeecada</a></li>
 	</ul>
 </li>
 
 <li>
-	<a href="javascript: void(0);"><i class="ti-agenda"></i><span>{{ _lang('Service') }}</span><span class="menu-arrow"><i class="mdi mdi-chevron-right"></i></span></a>
+	<a href="javascript: void(0);"><i class="ti-agenda"></i><span>isku xirka badeecada</span><span class="menu-arrow"><i class="mdi mdi-chevron-right"></i></span></a>
 	<ul class="nav-second-level" aria-expanded="false">
-		<li class="nav-item"><a class="nav-link" href="{{ url('services/create') }}">{{ _lang('Add New') }}</a></li>
-		<li class="nav-item"><a class="nav-link" href="{{ url('services') }}">{{ _lang('Service List') }}</a></li>	
+		<li class="nav-item"><a class="nav-link" href="{{ url('services/create') }}">abuur isku xir</a></li>
+		<li class="nav-item"><a class="nav-link" href="{{ url('services') }}">liiska isku xirka</a></li>
 	</ul>
 </li>
 
 <li>
-	<a href="javascript: void(0);"><i class="ti-truck"></i><span>{{ _lang('Supplier') }}</span><span class="menu-arrow"><i class="mdi mdi-chevron-right"></i></span></a>
+	<a href="javascript: void(0);"><i class="ti-truck"></i><span>iibiye</span><span class="menu-arrow"><i class="mdi mdi-chevron-right"></i></span></a>
 	<ul class="nav-second-level" aria-expanded="false">
-		<li class="nav-item"><a class="nav-link" href="{{ url('suppliers/create') }}">{{ _lang('Add New') }}</a></li>
-		<li class="nav-item"><a class="nav-link" href="{{ url('suppliers') }}">{{ _lang('Supplier List') }}</a></li>	
+		<li class="nav-item"><a class="nav-link" href="{{ url('suppliers/create') }}">abuur iibiye</a></li>
+		<li class="nav-item"><a class="nav-link" href="{{ url('suppliers') }}">liiska iibiyayaahsa</a></li>
 	</ul>
 </li>
 
 @if( has_feature('inventory_module') )
 <li>
-	<a href="javascript: void(0);"><i class="ti-bag"></i><span>{{ _lang('Purchase') }}</span><span class="menu-arrow"><i class="mdi mdi-chevron-right"></i></span></a>
+	<a href="javascript: void(0);"><i class="ti-bag"></i><span>soo iibso</span><span class="menu-arrow"><i class="mdi mdi-chevron-right"></i></span></a>
 	<ul class="nav-second-level" aria-expanded="false">
-		<li class="nav-item"><a class="nav-link" href="{{ url('purchase_orders') }}">{{ _lang('Purchase Orders') }}</a></li>
-		<li class="nav-item"><a class="nav-link" href="{{ url('purchase_orders/create') }}">{{ _lang('Create Purchase Order') }}</a></li>	
+		<li class="nav-item"><a class="nav-link" href="{{ url('purchase_orders') }}">liiska dalabyada</a></li>
+		<li class="nav-item"><a class="nav-link" href="{{ url('purchase_orders/create') }}">soo iibso alaab</a></li>
 	</ul>
 </li>
 
 <li>
-	<a href="javascript: void(0);"><i class="ti-back-left"></i><span>{{ _lang('Return') }}</span><span class="menu-arrow"><i class="mdi mdi-chevron-right"></i></span></a>
+	<a href="javascript: void(0);"><i class="ti-back-left"></i><span>alaab celin</span><span class="menu-arrow"><i class="mdi mdi-chevron-right"></i></span></a>
 	<ul class="nav-second-level" aria-expanded="false">
-		<li class="nav-item"><a class="nav-link" href="{{ url('purchase_returns') }}">{{ _lang('Purchase Return') }}</a></li>
-		<li class="nav-item"><a class="nav-link" href="{{ url('sales_returns') }}">{{ _lang('Sales Return') }}</a></li>	
+		<li class="nav-item"><a class="nav-link" href="{{ url('purchase_returns') }}">u celi iibiye</a></li>
+		<li class="nav-item"><a class="nav-link" href="{{ url('sales_returns') }}">ka celi macmiil</a></li>
 	</ul>
 </li>
 @endif
 
 
 <li>
-	<a href="javascript: void(0);"><i class="ti-shopping-cart-full"></i><span>{{ _lang('Sales') }}</span><span class="menu-arrow"><i class="mdi mdi-chevron-right"></i></span></a>
+	<a href="javascript: void(0);"><i class="ti-shopping-cart-full"></i><span>iibinta</span><span class="menu-arrow"><i class="mdi mdi-chevron-right"></i></span></a>
 	<ul class="nav-second-level" aria-expanded="false">
 		@if( has_feature('invoice_limit') )
-			<li class="nav-item"><a class="nav-link" href="{{ url('invoices/create') }}">{{ _lang('Add Invoice') }}</a></li>
-			<li class="nav-item"><a class="nav-link" href="{{ url('invoices') }}">{{ _lang('Invoice List') }}</a></li>	
+			<li class="nav-item"><a class="nav-link" href="{{ url('invoices/create') }}">jar boono</a></li>
+			<li class="nav-item"><a class="nav-link" href="{{ url('invoices') }}">liiska boonooyinka</a></li>
 		@endif
 
 		@if( has_feature('quotation_limit') )
-			<li class="nav-item"><a class="nav-link" href="{{ url('quotations/create') }}">{{ _lang('Add Quotation') }}</a></li>	
-			<li class="nav-item"><a class="nav-link" href="{{ url('quotations') }}">{{ _lang('Quotation List') }}</a></li>	
+			<li class="nav-item"><a class="nav-link" href="{{ url('quotations/create') }}">abuur iibin</a></li>
+			<li class="nav-item"><a class="nav-link" href="{{ url('quotations') }}">liiska iibinta</a></li>
 		@endif
 	</ul>
 </li>
 
 <li>
-	<a href="javascript: void(0);"><i class="ti-credit-card"></i><span>{{ _lang('Accounts') }}</span><span class="menu-arrow"><i class="mdi mdi-chevron-right"></i></span></a>
+	<a href="javascript: void(0);"><i class="ti-credit-card"></i><span>xisaabaadka</span><span class="menu-arrow"><i class="mdi mdi-chevron-right"></i></span></a>
 	<ul class="nav-second-level" aria-expanded="false">
-		<li class="nav-item"><a class="nav-link" href="{{ url('accounts') }}">{{ _lang('List Account') }}</a></li>
-		<li class="nav-item"><a class="nav-link" href="{{ url('accounts/create') }}">{{ _lang('Add New Account') }}</a></li>	
+		<li class="nav-item"><a class="nav-link" href="{{ url('accounts') }}">liiska akoonada</a></li>
+		<li class="nav-item"><a class="nav-link" href="{{ url('accounts/create') }}">ku dar account cusub</a></li>
 	</ul>
 </li>
 
 
 <li>
-	<a href="javascript: void(0);"><i class="ti-receipt"></i><span>{{ _lang('Transactions') }}</span><span class="menu-arrow"><i class="mdi mdi-chevron-right"></i></span></a>
+	<a href="javascript: void(0);"><i class="ti-receipt"></i><span>kala wareejinta</span><span class="menu-arrow"><i class="mdi mdi-chevron-right"></i></span></a>
 	<ul class="nav-second-level" aria-expanded="false">
-		<li class="nav-item"><a class="nav-link" href="{{ url('income') }}">{{ _lang('Income/Deposit') }}</a></li>
-		<li class="nav-item"><a class="nav-link" href="{{ url('expense') }}">{{ _lang('Expense') }}</a></li>	
-		<li class="nav-item"><a class="nav-link" href="{{ url('transfer/create') }}">{{ _lang('Transfer') }}</a></li>	
-		<li class="nav-item"><a class="nav-link" href="{{ url('income/calendar') }}">{{ _lang('Income Calendar') }}</a></li>	
-		<li class="nav-item"><a class="nav-link" href="{{ url('expense/calendar') }}">{{ _lang('Expense Calendar') }}</a></li>	
+		<li class="nav-item"><a class="nav-link" href="{{ url('income') }}">lacag dhigid/daqli</a></li>
+		<li class="nav-item"><a class="nav-link" href="{{ url('expense') }}">qarashaadka</a></li>
+		<li class="nav-item"><a class="nav-link" href="{{ url('transfer/create') }}">u wareeji akoon</a></li>
+		<li class="nav-item"><a class="nav-link" href="{{ url('income/calendar') }}">taariiqaha daqliga</a></li>
+		<li class="nav-item"><a class="nav-link" href="{{ url('expense/calendar') }}">taariiqaha qarashka</a></li>
 	</ul>
 </li>
 
 @if( has_feature('recurring_transaction') )
 <li>
-	<a href="javascript: void(0);"><i class="ti-wallet"></i><span>{{ _lang('Recurring Transaction') }}</span><span class="menu-arrow"><i class="mdi mdi-chevron-right"></i></span></a>
+	<a href="javascript: void(0);"><i class="ti-wallet"></i><span>wareejinta joogta ah</span><span class="menu-arrow"><i class="mdi mdi-chevron-right"></i></span></a>
 	<ul class="nav-second-level" aria-expanded="false">
-		<li class="nav-item"><a class="nav-link" href="{{ url('repeating_income/create') }}">{{ _lang('Add Repeating Income') }}</a></li>
-		<li class="nav-item"><a class="nav-link" href="{{ url('repeating_income') }}">{{ _lang('Repeating Income List') }}</a></li>	
-		<li class="nav-item"><a class="nav-link" href="{{ url('repeating_expense/create') }}">{{ _lang('Add Repeating Expense') }}</a></li>	
-		<li class="nav-item"><a class="nav-link" href="{{ url('repeating_expense') }}">{{ _lang('Repeating Expense List') }}</a></li>	
+		<li class="nav-item"><a class="nav-link" href="{{ url('repeating_income/create') }}">abuur daqliga joogtada ah</a></li>
+		<li class="nav-item"><a class="nav-link" href="{{ url('repeating_income') }}">liiska daqliga joogtada ah</a></li>
+		<li class="nav-item"><a class="nav-link" href="{{ url('repeating_expense/create') }}">abuur qarashka joogtada ah</a></li>
+		<li class="nav-item"><a class="nav-link" href="{{ url('repeating_expense') }}">liiska qarashka joogtada ah</a></li>
 	</ul>
 </li>
 @endif
@@ -128,11 +128,11 @@
 
 @if( has_feature('staff_limit') )
 <li>
-	<a href="javascript: void(0);"><i class="ti-user"></i><span>{{ _lang('Staffs') }}</span><span class="menu-arrow"><i class="mdi mdi-chevron-right"></i></span></a>
+	<a href="javascript: void(0);"><i class="ti-user"></i><span>shaqaalaha</span><span class="menu-arrow"><i class="mdi mdi-chevron-right"></i></span></a>
 	<ul class="nav-second-level" aria-expanded="false">
-		<li class="nav-item"><a class="nav-link" href="{{ url('staffs') }}">{{ _lang('All Staff') }}</a></li>
-		<li class="nav-item"><a class="nav-link" href="{{ url('staffs/create') }}">{{ _lang('Add New') }}</a></li>	
-		<li class="nav-item"><a class="nav-link" href="{{ route('roles.index') }}">{{ _lang('Staff Roles') }}</a></li>	
+		<li class="nav-item"><a class="nav-link" href="{{ url('staffs') }}">liiska shaqaalaha</a></li>
+		<li class="nav-item"><a class="nav-link" href="{{ url('staffs/create') }}">abuur shaqaale cusub</a></li>
+		<li class="nav-item"><a class="nav-link" href="{{ route('roles.index') }}">awoodaha shaqaalaha</a></li>
 	</ul>
 </li>
 @endif
@@ -140,30 +140,30 @@
 <li>
 	<a href="javascript: void(0);"><i class="ti-bar-chart"></i><span>{{ _lang('Reports') }}</span><span class="menu-arrow"><i class="mdi mdi-chevron-right"></i></span></a>
 	<ul class="nav-second-level" aria-expanded="false">
-		<li class="nav-item"><a class="nav-link" href="{{ url('reports/account_statement') }}">{{ _lang('Account Statement') }}</a></li>
-		<li class="nav-item"><a class="nav-link" href="{{ url('reports/day_wise_income') }}">{{ _lang('Detail Income Report') }}</a></li>	
-		<li class="nav-item"><a class="nav-link" href="{{ url('reports/date_wise_income') }}">{{ _lang('Date Wise Income') }}</a></li>	
-		<li class="nav-item"><a class="nav-link" href="{{ url('reports/day_wise_expense') }}">{{ _lang('Detail Expense Report') }}</a></li>	
-		<li class="nav-item"><a class="nav-link" href="{{ url('reports/date_wise_expense') }}">{{ _lang('Date Wise Expense') }}</a></li>	
-		<li class="nav-item"><a class="nav-link" href="{{ url('reports/transfer_report') }}">{{ _lang('Transfer Report') }}</a></li>	
-		<li class="nav-item"><a class="nav-link" href="{{ url('reports/income_vs_expense') }}">{{ _lang('Income VS Expense') }}</a></li>	
-		<li class="nav-item"><a class="nav-link" href="{{ url('reports/report_by_payer') }}">{{ _lang('Report By Payer') }}</a></li>	
-		<li class="nav-item"><a class="nav-link" href="{{ url('reports/report_by_payee') }}">{{ _lang('Report By Payee') }}</a></li>	
+		<li class="nav-item"><a class="nav-link" href="{{ url('reports/account_statement') }}">dhaqdhaqaaqa akoonada</a></li>
+		<li class="nav-item"><a class="nav-link" href="{{ url('reports/day_wise_income') }}">daqliga maalinlaha</a></li>
+		<li class="nav-item"><a class="nav-link" href="{{ url('reports/date_wise_income') }}">daqli taarikheed</a></li>
+		<li class="nav-item"><a class="nav-link" href="{{ url('reports/day_wise_expense') }}">qarash maalinle</a></li>
+		<li class="nav-item"><a class="nav-link" href="{{ url('reports/date_wise_expense') }}">qarash taarikhle</a></li>
+		<li class="nav-item"><a class="nav-link" href="{{ url('reports/transfer_report') }}">dhaqdhaqaaqa wareejineed</a></li>
+		<li class="nav-item"><a class="nav-link" href="{{ url('reports/income_vs_expense') }}">farqiga qarashka iyo daqliga</a></li>
+		<li class="nav-item"><a class="nav-link" href="{{ url('reports/report_by_payer') }}">dhaqdhaqaaqa bixinta macaamiilka</a></li>
+		<li class="nav-item"><a class="nav-link" href="{{ url('reports/report_by_payee') }}">dhaqdhaqaaqa helida macaamiilka</a></li>
 	</ul>
 </li>
 
 <li>
-	<a href="javascript: void(0);"><i class="ti-settings"></i><span>{{ _lang('Settings') }}</span><span class="menu-arrow"><i class="mdi mdi-chevron-right"></i></span></a>
+	<a href="javascript: void(0);"><i class="ti-settings"></i><span>maamulka</span><span class="menu-arrow"><i class="mdi mdi-chevron-right"></i></span></a>
 	<ul class="nav-second-level" aria-expanded="false">
-		<li class="nav-item"><a class="nav-link" href="{{ url('company/general_settings') }}">{{ _lang('Company Settings') }}</a></li>
-		<li class="nav-item"><a class="nav-link" href="{{ url('company_email_template') }}">{{ _lang('Email Template') }}</a></li>	
-		<li class="nav-item"><a class="nav-link" href="{{ url('permission/control') }}">{{ _lang('Access Control') }}</a></li>	
-		<li class="nav-item"><a class="nav-link" href="{{ url('chart_of_accounts') }}">{{ _lang('Income & Expense Types') }}</a></li>	
+		<li class="nav-item"><a class="nav-link" href="{{ url('company/general_settings') }}">maamulka shirkada</a></li>
+		<!-- <li class="nav-item"><a class="nav-link" href="{{ url('company_email_template') }}"></a></li> -->
+		<li class="nav-item"><a class="nav-link" href="{{ url('permission/control') }}">maamulka isticmaalka</a></li>
+		<li class="nav-item"><a class="nav-link" href="{{ url('chart_of_accounts') }}">noocyada qarshka iyo daqliga</a></li>
 		@if( has_feature('project_management_module') )
-			<li class="nav-item"><a class="nav-link" href="{{ url('company/crm_settings') }}">{{ _lang('CRM Settings') }}</a></li>
+			<!-- <li class="nav-item"><a class="nav-link" href="{{ url('company/crm_settings') }}">{{ _lang('CRM Settings') }}</a></li> -->
 		@endif
-		<li class="nav-item"><a class="nav-link" href="{{ url('payment_methods') }}">{{ _lang('Payment Methods') }}</a></li>	
-		<li class="nav-item"><a class="nav-link" href="{{ url('product_units') }}">{{ _lang('Product Unit') }}</a></li>	
-		<li class="nav-item"><a class="nav-link" href="{{ url('taxs') }}">{{ _lang('Tax Settings') }}</a></li>	
+		<li class="nav-item"><a class="nav-link" href="{{ url('payment_methods') }}">hababka lacag bixinta</a></li>
+		<li class="nav-item"><a class="nav-link" href="{{ url('product_units') }}">cabirka badeecada</a></li>
+		<li class="nav-item"><a class="nav-link" href="{{ url('taxs') }}">maamulka canshuurta</a></li>
 	</ul>
 </li>

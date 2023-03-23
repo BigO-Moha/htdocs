@@ -79,10 +79,10 @@ return array (
     'normal' => $rootDir . '/lib/fonts/DejaVuSerif',
   ),
   'poppins' => array(
-    'normal' => $fontDir . '/poppins_normal_c1b7381dfaadf37a84cf14d786076e6d',
-    '500' => $fontDir . '/poppins_500_3ab22c79a50a7416f996a1aba688428d',
-    '600' => $fontDir . '/poppins_600_270e18a84ac8b306c8f31abe1d0720fa',
-    'bold' => $fontDir . '/poppins_bold_7eb29046bc7eaf66b896ec27702d038b',
+    'normal' => $fontDir . '/poppins_normal_442dffd12abdf0df26c14405d3f49bfa',
+    '500' => $fontDir . '/poppins_500_6a6f5e017da7e062546fd806ab3b249c',
+    '600' => $fontDir . '/poppins_600_272b14b77a21dc5827f4570eff556c8f',
+    'bold' => $fontDir . '/poppins_bold_2d1c4b360c3ac297e98fc2cfd808a2cc',
   ),
 );
 }; ?>

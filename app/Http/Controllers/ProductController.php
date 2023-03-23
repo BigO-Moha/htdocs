@@ -14,7 +14,7 @@ use DB;
 
 class ProductController extends Controller
 {
-	
+
     /**
      * Display a listing of the resource.
      *
@@ -30,7 +30,7 @@ class ProductController extends Controller
 
     /** Excel Import**/
     public function import(Request $request)
-    {       
+    {
         if($request->isMethod('get')){
             return view('backend.accounting.product.import');
         }else{
@@ -40,20 +40,20 @@ class ProductController extends Controller
             $validator = Validator::make($request->all(), [
                 'file' => 'required|mimes:xlsx',
             ]);
-            
+
             if ($validator->fails()) {
-                if($request->ajax()){ 
+                if($request->ajax()){
                     return response()->json(['result'=>'error','message'=>$validator->errors()->all()]);
                 }else{
                     return redirect('products/import')->withErrors($validator)
                                                       ->withInput();
-                }           
+                }
             }
-                
+
             $new_rows = 0;
 
             DB::beginTransaction();
-            
+
             $previous_rows = Item::where('company_id',company_id())->count();
 
             $import = Excel::import(new ProductsImport, request()->file('file'));
@@ -65,8 +65,8 @@ class ProductController extends Controller
             DB::commit();
 
             return back()->with('success',$new_rows.' '._lang('Rows Imported Sucessfully'));
-        }           
-        
+        }
+
     }
 
     /**
@@ -90,26 +90,26 @@ class ProductController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
-    {	
+    {
 		$validator = Validator::make($request->all(), [
 			'item_name' => 'required',
             'product_cost' => 'required|numeric',
-            'product_price' => 'required|numeric',
+            'product_price' => 'numeric',
             'product_unit' => 'required',
 		]);
-		
+
 		if ($validator->fails()) {
-			if($request->ajax()){ 
+			if($request->ajax()){
 			    return response()->json(['result'=>'error','message'=>$validator->errors()->all()]);
 			}else{
 				return redirect('products/create')
 							->withErrors($validator)
 							->withInput();
-			}			
+			}
 		}
-		
-		DB::beginTransaction();	
-		
+
+		DB::beginTransaction();
+
         //Create Item
         $item = new Item();
         $item->item_name = $request->input('item_name');
@@ -128,7 +128,7 @@ class ProductController extends Controller
         $product->tax_method = 'exclusive';
         //$product->tax_id = $request->input('tax_id');
         $product->description = $request->input('description');
-        
+
         $product->save();
 
         //Create Stock Row
@@ -137,17 +137,17 @@ class ProductController extends Controller
         $stock->quantity = 0;
         $stock->company_id = company_id();
         $stock->save();
-		
+
 		DB::commit();
-        
+
 		if(! $request->ajax()){
            return redirect('products/create')->with('success', _lang('Saved sucessfully'));
         }else{
 		   return response()->json(['result'=>'success','action'=>'store','message'=>_lang('Saved sucessfully'),'data'=>$item]);
 		}
-        
+
    }
-	
+
 
     /**
      * Display the specified resource.
@@ -163,8 +163,8 @@ class ProductController extends Controller
 		    return view('backend.accounting.product.view',compact('item','id'));
 		}else{
 			return view('backend.accounting.product.modal.view',compact('item','id'));
-		} 
-        
+		}
+
     }
 
     /**
@@ -181,8 +181,8 @@ class ProductController extends Controller
 		   return view('backend.accounting.product.edit',compact('item','id'));
 		}else{
            return view('backend.accounting.product.modal.edit',compact('item','id'));
-		}  
-        
+		}
+
     }
 
     /**
@@ -197,33 +197,34 @@ class ProductController extends Controller
         $validator = Validator::make($request->all(), [
 			'item_name' => 'required',
             'product_cost' => 'required|numeric',
-            'product_price' => 'required|numeric',
+            'product_price' => 'numeric',
             'product_unit' => 'required',
+            'account_id' => 'required',
 		]);
-		
+
 		if ($validator->fails()) {
-			if($request->ajax()){ 
+			if($request->ajax()){
 			    return response()->json(['result'=>'error','message'=>$validator->errors()->all()]);
 			}else{
 				return redirect()->route('products.edit', $id)
 							->withErrors($validator)
 							->withInput();
-			}			
+			}
 		}
-    
-	  
+
+
         //Update item
 		DB::beginTransaction();
         $item = Item::where("id",$id)->where("company_id",company_id())->first();
-        
+
         if( $item ){
-				
+
             $item->item_name = $request->input('item_name');
             $item->item_type = 'product';
             $item->company_id = company_id();
             $item->save();
 
-            
+
             $product = Product::where("item_id",$id)->first();
             $product->item_id = $item->id;
             $product->supplier_id = $request->input('supplier_id');
@@ -233,9 +234,9 @@ class ProductController extends Controller
             $product->tax_method = 'exclusive';
             //$product->tax_id = $request->input('tax_id');
             $product->description = $request->input('description');
-        
+
             $product->save();
-			
+
 			DB::commit();
         }else{
             if(! $request->ajax()){
@@ -245,13 +246,13 @@ class ProductController extends Controller
             }
         }
 
-		
+
 		if(! $request->ajax()){
            return redirect('products')->with('success', _lang('Updated sucessfully'));
         }else{
 		   return response()->json(['result'=>'success','action'=>'update', 'message'=>_lang('Updated sucessfully'),'data'=>$product]);
 		}
-	    
+
     }
 
     /**
@@ -263,15 +264,15 @@ class ProductController extends Controller
     public function destroy($id)
     {
 		DB::beginTransaction();
-		
+
         $item = Item::where("id",$id)->where("company_id",company_id());
         $item->delete();
 
         $product = Product::where("item_id",$id);
         $product->delete();
-		
+
 		DB::commit();
-		
+
         return redirect('products')->with('success',_lang('Deleted sucessfully'));
     }
 
@@ -279,7 +280,7 @@ class ProductController extends Controller
     public function get_product(Request $request,$id)
     {
         $item = Item::where("id",$id)->where("company_id",company_id())->first();
-        
+
 		if($item->item_type == 'product'){
 			echo json_encode(array("item"=>$item,"product"=>$item->product,"tax"=>$item->product->tax,"available_quantity"=>$item->product_stock->quantity));
         }else if($item->item_type == 'service'){

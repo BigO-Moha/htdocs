@@ -21,7 +21,7 @@ $date_format = get_company_option('date_format','Y-m-d');
 			<div class="seo-fact sbg1">
 				<div class="p-4">
 					<div class="seofct-icon">
-						<span>{{ _lang('Current Month Income') }}</span>
+						<span>daqliga bishaan</span>
 					</div>
 					<h2>{{ decimalPlace($current_month_income, $currency) }}</h2>
 				</div>
@@ -34,7 +34,7 @@ $date_format = get_company_option('date_format','Y-m-d');
 			<div class="seo-fact sbg2">
 				<div class="p-4">
 					<div class="seofct-icon">
-						<span>{{ _lang('Current Month Expense') }}</span>
+						<span>qarashaadka bishaan</span>
 					</div>
 					<h2>{{ decimalPlace($current_month_expense, $currency) }}</h2>
 				</div>
@@ -42,7 +42,7 @@ $date_format = get_company_option('date_format','Y-m-d');
 		</div>
 	</div>
 
-	<div class="col-lg-3 mb-3">
+	<!-- <div class="col-lg-3 mb-3">
 		<div class="card">
 			<div class="seo-fact sbg4">
 				<div class="p-4">
@@ -53,9 +53,9 @@ $date_format = get_company_option('date_format','Y-m-d');
 				</div>
 			</div>
 		</div>
-	</div>
+	</div> -->
 
-	<div class="col-lg-3 mb-3">
+	<!-- <div class="col-lg-3 mb-3">
 		<div class="card">
 			<div class="seo-fact sbg2">
 				<div class="p-4">
@@ -66,27 +66,27 @@ $date_format = get_company_option('date_format','Y-m-d');
 				</div>
 			</div>
 		</div>
-	</div>
+	</div> -->
 
-	<div class="col-lg-3 mb-3">
+	<!-- <div class="col-lg-3 mb-3">
 		<div class="card">
 			<div class="seo-fact sbg1">
 				<div class="p-4">
 					<div class="seofct-icon">
-						<span>{{ _lang('Total Invoice') }}</span>
+						<span>tirada boonooyinka</span>
 					</div>
 					<h2>{{ $total_invoice_count }}</h2>
 				</div>
 			</div>
 		</div>
-	</div>
+	</div> -->
 
 	<div class="col-lg-3 mb-3">
 		<div class="card">
 			<div class="seo-fact sbg3">
 				<div class="p-4">
 					<div class="seofct-icon">
-						<span>{{ _lang('Unpaid Invoice') }}</span>
+						<span>tirada qaansheegta</span>
 					</div>
 					<h2>{{ $unpaid_invoice_count }}</h2>
 				</div>
@@ -99,7 +99,7 @@ $date_format = get_company_option('date_format','Y-m-d');
 			<div class="seo-fact sbg4">
 				<div class="p-4">
 					<div class="seofct-icon">
-						<span>{{ _lang('Invoice Due Amount') }}</span>
+						<span>qaansheegta aan la bixin</span>
 					</div>
 					<h2>{{ decimalPlace($invoice_due_amount->grand_total - $invoice_due_amount->paid, $currency) }}</h2>
 				</div>
@@ -112,7 +112,7 @@ $date_format = get_company_option('date_format','Y-m-d');
 			<div class="seo-fact sbg3">
 				<div class="p-4">
 					<div class="seofct-icon">
-						<span>{{ _lang('Canceled Invoice') }}</span>
+						<span>qaansheegta la joojiyay</span>
 					</div>
 					<h2>{{ $canceled_invoice_count }}</h2>
 				</div>
@@ -127,7 +127,7 @@ $date_format = get_company_option('date_format','Y-m-d');
   <div class="col-md-12">
 	 <div class="card">
 		<div class="card-body">
-		   <h4 class="header-title mt-0">{{ _lang('Income VS Expense')." - ".date('Y') }}</h4>
+		   <h4 class="header-title mt-0">{{ "daqliga / qarashaadka"." - ".date('Y') }}</h4>
 		   <div id="yearly_income_expense"></div>
 		</div>
 	 </div>
@@ -135,8 +135,8 @@ $date_format = get_company_option('date_format','Y-m-d');
 </div>
 
 
-<div class="row d-flex align-items-stretch">
-  <!-- Panel 1 -->
+<!-- <div class="row d-flex align-items-stretch">
+
   <div class="col-md-12">
 	 <div class="card h-100">
 		<div class="card-body">
@@ -174,11 +174,11 @@ $date_format = get_company_option('date_format','Y-m-d');
 			</div>
 		</div>
 	 </div>
-  </div>
+  </div> -->
   <!-- End Panel 1 -->
 
   <!-- Panel 2 -->
-  <div class="col-md-12 mt-4">
+  <!-- <div class="col-md-12 mt-4">
 	 <div class="card h-100">
 		<div class="card-body">
 		   <h4 class="header-title mt-0">{{ _lang('My Recent Tasks') }}</h4>
@@ -217,7 +217,7 @@ $date_format = get_company_option('date_format','Y-m-d');
 			</div>
 		</div>
 	 </div>
-  </div>
+  </div> -->
   <!-- End Panel 2 -->
 
 </div>
@@ -227,7 +227,7 @@ $date_format = get_company_option('date_format','Y-m-d');
   <div class="col-md-6">
 	 <div class="card h-100">
 		<div class="card-body">
-		   <h4 class="header-title mt-0">{{ _lang('Income vs Expense')." - ".date('M, Y') }}</h4>
+		   <h4 class="header-title mt-0">{{ "farqiga daqliga iyo qarashka"." - ".date('M, Y') }}</h4>
 		   <div id="dn_income_expense"></div>
 		</div>
 	 </div>
@@ -237,14 +237,14 @@ $date_format = get_company_option('date_format','Y-m-d');
   <div class="col-md-6">
 	 <div class="card h-100">
 		<div class="card-body">
-		  <h4 class="header-title mt-0">{{ _lang('Financial Balance Status') }}</h4>
+		  <h4 class="header-title mt-0">haraaga xisaabaadka maliyadeed</h4>
 		  <div class="table-responsive">
 			<table class="table table-bordered">
 				<thead>
 				  <tr>
-					<th>{{ _lang('A/C') }}</th>
-					<th>{{ _lang('A/C Number') }}</th>
-					<th class="text-right">{{ _lang('Balance') }}</th>
+					<th>magaca akoonka</th>
+					<th>akoon numberka</th>
+					<th class="text-right">haraadaga</th>
 				  </tr>
 				</thead>
 				<tbody>

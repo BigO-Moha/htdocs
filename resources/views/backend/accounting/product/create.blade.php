@@ -51,15 +51,18 @@
 				  </div>
 				</div>
 
-                <div class="col-md-6">
-				  <div class="form-group">
-					<a href="{{ route('product_units.create') }}" data-reload="false" data-title="Product site" class="ajax-modal-2 select2-add"><i class="ti-plus"></i> {{ _lang('Add New') }}</a>
-					<label class="control-label">Product site</label>
-					<select class="form-control select2-ajax" data-value="unit_name" data-display="unit_name" data-table="product_units" data-where="1" name="product_unit" required>
-						<option value="">{{ _lang('- Select Product Unit -') }}</option>
-					</select>
-				  </div>
-				</div>
+        <div class="col-12">
+		<div class="row">
+			<div class="col-md-6">
+			  <div class="form-group">
+				<a href="{{ route('accounts.create') }}" data-reload="false" data-title="{{ _lang('Create Account') }}" class="ajax-modal-2 select2-add"><i class="ti-plus"></i> {{ _lang('Add New') }}</a>
+				<label class="control-label">Select Account</label>
+				<select class="form-control select2-ajax" data-value="id" data-display="account_title" data-display2="account_currency" data-table="accounts" data-where="1" name="account_id" id="account_id" required>
+				   <option value="">{{ _lang('Select One') }}</option>
+				   {{ create_option("accounts","id",array("account_title","account_currency"),old('account_id'),array("company_id="=>company_id())) }}
+				</select>
+			  </div>
+			</div>
 
 
 				<div class="col-md-12">
